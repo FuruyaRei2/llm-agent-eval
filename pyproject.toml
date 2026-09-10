@@ -1,0 +1,23 @@
+[project]
+name = "llm-agent"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.141.1",
+    "httpx>=0.28.1",
+    "openai>=3.8.0",
+    "python-dotenv>=1.2.3",
+    "uvicorn>=0.52.4",
+]
+
+# 这是一个「脚本集合」型项目，不是一个要被 import 的 python 包。
+# 不设为 false 的话，uv 每次同步都会把项目自身打包装进 .venv，
+# 在受限环境里替换安装产物时会报 Operation not permitted。
+[tool.uv]
+package = false
+
+[build-system]
+requires = ["uv_build>=0.12.9,<0.13.0"]
+build-backend = "uv_build"

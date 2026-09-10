@@ -1,0 +1,20 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# 密钥文件 —— 绝对不能提交到 GitHub
+.env
+
+# trace 日志 —— 会越攒越大，而且里面有问题原文，不提交
+traces/
+# 注：evals/ 和 reports/ 是评测成果，要提交 —— 简历上挂的就是它们
+
+# macOS
+.DS_Store
